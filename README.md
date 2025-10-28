@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# 3xecutablefile Portfolio
 
-## Project info
+Dark terminal-themed portfolio showcasing offensive security, DFIR, and AI automation work.
 
-**URL**: https://lovable.dev/projects/fb3f25b1-3f77-4d55-84e4-3f2bba9a6151
+## Features
 
-## How can I edit this code?
+- **Terminal aesthetic:** Monospace fonts, blinking cursor, command-prompt sections
+- **GitHub integration:** Auto-fetches repositories via GitHub API
+- **Responsive design:** Mobile-friendly with horizontal scrolling for ASCII art
+- **SEO optimized:** Proper meta tags and semantic HTML
+- **GitHub Pages ready:** Builds to `/docs` for easy deployment
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- React 18 + TypeScript
+- Tailwind CSS (custom terminal color system)
+- Vite
+- TanStack Query (for GitHub API)
+- shadcn/ui components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fb3f25b1-3f77-4d55-84e4-3f2bba9a6151) and start prompting.
+## Local Development
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Install dependencies
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start dev server
 npm run dev
+
+# Build for production (outputs to /docs)
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed GitHub Pages deployment instructions.
 
-**Use GitHub Codespaces**
+**Quick deploy:**
+1. Push to GitHub
+2. Enable Pages in repo settings (branch: `gh-pages` or `main/docs`)
+3. Site live at `https://[username].github.io/[repo-name]`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Customization
 
-## What technologies are used for this project?
+- **Colors:** Edit `src/index.css` (HSL color system)
+- **Content:** Update components in `src/components/`
+- **Sections:** Modify `src/pages/Index.tsx`
+- **GitHub username:** Change in `Projects.tsx` fetch URL
 
-This project is built with:
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/
+│   ├── Hero.tsx          # ASCII banner + badges
+│   ├── Whoami.tsx        # Bio section
+│   ├── Capabilities.tsx  # Skills breakdown
+│   ├── Projects.tsx      # GitHub repos
+│   ├── Stack.tsx         # Tech stack JSON
+│   ├── Roadmap.tsx       # Future plans
+│   └── Contact.tsx       # Contact links
+├── pages/
+│   └── Index.tsx         # Main page
+└── index.css             # Design system
+```
 
-## How can I deploy this project?
+## Ethics Notice
 
-Simply open [Lovable](https://lovable.dev/projects/fb3f25b1-3f77-4d55-84e4-3f2bba9a6151) and click on Share -> Publish.
+All offensive tooling and techniques showcased are for authorized testing, ethical research, and defensive improvement only. No unauthorized access or exploitation.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+**LinkedIn/Twitter Copy:**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Terminal-first security portfolio for @3xecutablefile (alias: mrrobot). Red Team ops, DFIR engineering, and AI-assisted automation. Built with React + Tailwind, deployed on GitHub Pages. All tooling is lab-only and ethical research focused. Check it out: [your-deployed-url]
