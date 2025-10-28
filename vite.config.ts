@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/3xecutablefile/" : "/", // Use absolute path for GitHub Pages
+  base: mode === "production" ? "./" : "/", // Use relative base for GitHub Pages builds
   build: {
     outDir: mode === "production" ? "docs" : "dist", // Output to /docs for GitHub Pages, dist for dev
     emptyOutDir: true,
