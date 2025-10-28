@@ -4,11 +4,10 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-// GitHub Pages configuration: set base to repo name for deployment
 export default defineConfig(({ mode }) => ({
-  base: "./", // Use relative paths for GitHub Pages
+  base: mode === "production" ? "./" : "/", // Use relative paths only for production (GitHub Pages)
   build: {
-    outDir: "docs", // Output to /docs for GitHub Pages
+    outDir: mode === "production" ? "docs" : "dist", // Output to /docs for GitHub Pages, dist for dev
     emptyOutDir: true,
   },
   server: {
