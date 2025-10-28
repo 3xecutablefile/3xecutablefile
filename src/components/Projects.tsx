@@ -31,19 +31,37 @@ export const Projects = () => {
 
   const placeholderRepos: GitHubRepo[] = [
     {
-      name: "placeholder-project-1",
-      description: "Lab reconnaissance automation toolkit",
-      html_url: "https://github.com/3xecutablefile",
+      name: "RustMap",
+      description: "Advanced reconnaissance automation toolkit built in Rust",
+      html_url: "https://github.com/3xecutablefile/RustMap",
       language: "Rust",
       stargazers_count: 0,
       forks_count: 0,
       updated_at: new Date().toISOString()
     },
     {
-      name: "placeholder-project-2",
-      description: "DFIR memory analysis pipeline",
-      html_url: "https://github.com/3xecutablefile",
+      name: "openCTF",
+      description: "Terminal-based AI assistant for CTF challenges and writeups",
+      html_url: "https://github.com/3xecutablefile/openCTF",
       language: "TypeScript",
+      stargazers_count: 0,
+      forks_count: 0,
+      updated_at: new Date().toISOString()
+    },
+    {
+      name: "terminal-ui",
+      description: "Modular TUI framework for building terminal applications",
+      html_url: "https://github.com/3xecutablefile/terminal-ui",
+      language: "Rust",
+      stargazers_count: 0,
+      forks_count: 0,
+      updated_at: new Date().toISOString()
+    },
+    {
+      name: "ESP32-Firmware",
+      description: "Embedded systems experiments and firmware projects",
+      html_url: "https://github.com/3xecutablefile/ESP32-Firmware",
+      language: "C++",
       stargazers_count: 0,
       forks_count: 0,
       updated_at: new Date().toISOString()

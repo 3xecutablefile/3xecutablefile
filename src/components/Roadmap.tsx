@@ -2,12 +2,12 @@ import { TerminalSection } from "./TerminalSection";
 
 export const Roadmap = () => {
   const roadmapItems = [
-    "PT1 → OSCP certification pipeline (Q2-Q3 2025)",
-    "RustMap: Advanced port scanner with ML-based service detection",
-    "PurpleOps: Integrated purple team platform (attack simulation + defense validation)",
-    "DFIR-AI: LLM-powered incident triage and report generation toolkit",
-    "Open-source contributions to memory forensics and red team frameworks",
-    "Research: AI-assisted adversary emulation and automated playbook generation"
+    "Finish TryHackMe PT1 → begin OSCP certification path",
+    "Expand RustMap with passive reconnaissance capabilities",
+    "Publish CTF writeups and automation scripts from recent competitions",
+    "Build out openCTF with multi-model AI support for challenge solving",
+    "Contribute to open-source security tooling and terminal UI projects",
+    "Experiment with AI-assisted vulnerability research workflows"
   ];
 
   return (

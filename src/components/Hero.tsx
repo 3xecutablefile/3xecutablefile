@@ -26,8 +26,12 @@ export const Hero = () => {
         3xecutablefile<span className="terminal-cursor">_</span>
       </h1>
       
-      <p className="text-muted-foreground text-sm md:text-base mb-6">
-        alias: <span className="text-accent">mrrobot</span> — Red Team | DFIR | AI-assisted automation
+      <p className="text-muted-foreground text-sm md:text-base mb-4">
+        alias: <span className="text-accent">mrrobot</span> — dev | automation | red-team labs | AI tooling
+      </p>
+
+      <p className="text-accent text-xs md:text-sm mb-6 font-semibold">
+        3rd Place — Code Battle 2025 UAE Inter-School Hackathon · Dubai Police CTFAE Finalist
       </p>
 
       <div className="flex flex-wrap justify-center gap-2 mb-8">

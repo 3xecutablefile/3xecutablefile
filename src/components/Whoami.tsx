@@ -5,17 +5,13 @@ export const Whoami = () => {
     <TerminalSection command="whoami" id="whoami">
       <div className="space-y-3 text-foreground/90">
         <p>
-          Security engineer and offensive developer focused on Red Team operations, 
-          Digital Forensics & Incident Response (DFIR), and AI-assisted automation. 
-          Building custom tooling for reconnaissance, post-exploitation, and forensic analysis.
+          Developer building automation tooling, AI-assisted workflows, and experimenting with offensive security concepts in controlled lab environments. Recent achievements include 3rd place at Code Battle 2025 UAE Inter-School Hackathon and finalist at Dubai Police CTFAE Cyber Challenge.
         </p>
         <p>
-          Terminal-first workflow. Rust and TypeScript for implant frameworks and automation pipelines. 
-          Integrating LLMs into security workflows for faster triage, report generation, and threat intelligence.
+          Terminal-first development workflow. Primary focus on Rust and TypeScript for building automation pipelines, reconnaissance tools, and integrating AI capabilities into security research and CTF participation.
         </p>
         <p>
-          Committed to ethical research and responsible disclosure. All offensive work is lab-confined 
-          and designed to strengthen defensive postures.
+          All offensive tooling and testing is lab-only, used for learning, CTF competitions, and ethical research. Committed to responsible disclosure and defensive improvement through hands-on experimentation.
         </p>
       </div>
     </TerminalSection>

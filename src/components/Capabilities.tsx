@@ -3,16 +3,16 @@ import { TerminalSection } from "./TerminalSection";
 export const Capabilities = () => {
   const capabilities = {
     "Offensive Development": [
-      "Implant frameworks (C2 agent design, evasion techniques)",
-      "Reconnaissance automation (OSINT pipelines, subdomain enumeration)",
-      "Post-exploitation modules (privilege escalation, lateral movement)",
-      "Payload obfuscation and delivery mechanisms"
+      "Lab-based reconnaissance automation and OSINT pipelines",
+      "CTF tooling and challenge automation frameworks",
+      "Network scanning and service enumeration utilities",
+      "Payload experimentation in isolated environments"
     ],
-    "DFIR Engineering": [
-      "Memory forensics (Volatility, custom plugins)",
-      "Timeline reconstruction (log correlation, artifact analysis)",
-      "Log parsing and anomaly detection pipelines",
-      "Incident triage automation"
+    "DFIR Research": [
+      "Memory forensics and artifact analysis learning",
+      "Log parsing and timeline reconstruction experiments",
+      "Anomaly detection pipeline development",
+      "Incident response automation prototypes"
     ],
     "Infrastructure & Automation": [
       "n8n workflow orchestration (IR, threat intel, data enrichment)",
