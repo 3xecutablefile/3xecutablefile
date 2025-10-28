@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Hero = () => {
   const badges = [
@@ -50,6 +51,9 @@ export const Hero = () => {
             TryHackMe <ExternalLink className="ml-1 h-3 w-3" />
           </Badge>
         </a>
+        <div className="flex items-center">
+          <ThemeToggle />
+        </div>
       </div>
 
       <div className="max-w-3xl mx-auto bg-destructive/10 border border-destructive/30 rounded p-4 text-sm text-left">

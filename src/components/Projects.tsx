@@ -1,8 +1,10 @@
 import { TerminalSection } from "./TerminalSection";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Star, GitFork } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Star, GitFork, Filter } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 
 interface GitHubRepo {
   name: string;
@@ -23,6 +25,8 @@ const fetchGitHubRepos = async (): Promise<GitHubRepo[]> => {
 };
 
 export const Projects = () => {
+  const [selectedFilter, setSelectedFilter] = useState<string>('all');
+  
   const { data: repos, isLoading, error } = useQuery({
     queryKey: ["github-repos"],
     queryFn: fetchGitHubRepos,
@@ -69,9 +73,14 @@ export const Projects = () => {
   ];
 
   const displayRepos = error || !repos ? placeholderRepos : repos.slice(0, 6);
+  
+  const allLanguages = Array.from(new Set(displayRepos.map(repo => repo.language).filter(Boolean)));
+  const filteredRepos = selectedFilter === 'all' 
+    ? displayRepos 
+    : displayRepos.filter(repo => repo.language === selectedFilter);
 
   return (
-    <TerminalSection command="ls -la projects/" id="projects">
+    <TerminalSection command="ls -la projects/" id="projects" typing>
       {isLoading && (
         <p className="text-muted-foreground text-sm">Loading repositories...</p>
       )}
@@ -86,8 +95,34 @@ export const Projects = () => {
         </p>
       )}
 
+      <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          <Filter className="h-4 w-4" />
+          <span>Filter by language:</span>
+        </div>
+        <Button
+          variant={selectedFilter === 'all' ? 'default' : 'outline'}
+          size="sm"
+          onClick={() => setSelectedFilter('all')}
+          className="text-xs"
+        >
+          All ({displayRepos.length})
+        </Button>
+        {allLanguages.map(lang => (
+          <Button
+            key={lang}
+            variant={selectedFilter === lang ? 'default' : 'outline'}
+            size="sm"
+            onClick={() => setSelectedFilter(lang)}
+            className="text-xs"
+          >
+            {lang} ({displayRepos.filter(repo => repo.language === lang).length})
+          </Button>
+        ))}
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {displayRepos.map((repo, idx) => (
+        {filteredRepos.map((repo, idx) => (
           <Card key={idx} className="p-4 bg-card border-border hover:border-accent/50 transition-all duration-300 group">
             <div className="flex justify-between items-start mb-2">
               <a 

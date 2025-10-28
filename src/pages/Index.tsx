@@ -5,6 +5,8 @@ import { Projects } from "@/components/Projects";
 import { Stack } from "@/components/Stack";
 import { Roadmap } from "@/components/Roadmap";
 import { Contact } from "@/components/Contact";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { InteractiveTerminal } from "@/components/InteractiveTerminal";
 
 const Index = () => {
   return (
@@ -13,12 +15,27 @@ const Index = () => {
         <Hero />
         
         <main className="space-y-12">
-          <Whoami />
-          <Capabilities />
-          <Projects />
-          <Stack />
-          <Roadmap />
-          <Contact />
+          <ScrollReveal delay={100}>
+            <Whoami />
+          </ScrollReveal>
+          <ScrollReveal delay={200} direction="left">
+            <Capabilities />
+          </ScrollReveal>
+          <ScrollReveal delay={250}>
+            <InteractiveTerminal />
+          </ScrollReveal>
+          <ScrollReveal delay={300} direction="right">
+            <Projects />
+          </ScrollReveal>
+          <ScrollReveal delay={400} direction="up">
+            <Stack />
+          </ScrollReveal>
+          <ScrollReveal delay={500} direction="left">
+            <Roadmap />
+          </ScrollReveal>
+          <ScrollReveal delay={600} direction="up">
+            <Contact />
+          </ScrollReveal>
         </main>
 
         <footer className="mt-16 pt-8 border-t border-border text-center text-muted-foreground text-sm">
